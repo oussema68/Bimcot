@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Toggle language on button click
     if (langToggle) {
         langToggle.addEventListener('click', () => {
-            const newLang = currentLang === 'en' ? 'fr' : 'en';
+            const newLang = currentLang === 'fr' ? 'fr' : 'en';
             setLanguage(newLang);
         });
     }
