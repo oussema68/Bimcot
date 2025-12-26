@@ -1,3 +1,69 @@
+// Language management
+let currentLang = localStorage.getItem('language') || 'en';
+
+// Language toggle functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const langToggle = document.getElementById('langToggle');
+    
+    // Set initial language
+    setLanguage(currentLang);
+    
+    // Toggle language on button click
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            const newLang = currentLang === 'en' ? 'fr' : 'en';
+            setLanguage(newLang);
+        });
+    }
+});
+
+function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('language', lang);
+    
+    // Update HTML lang attribute
+    document.documentElement.lang = lang;
+    
+    // Update language toggle button
+    const langToggle = document.getElementById('langToggle');
+    const flags = langToggle?.querySelectorAll('.lang-flag');
+    if (langToggle && flags) {
+        if (lang === 'fr') {
+            langToggle.classList.add('active');
+        } else {
+            langToggle.classList.remove('active');
+        }
+    }
+    
+    // Update page title
+    const titleKey = lang === 'fr' ? 'BIMCOT - Formations Certifiées IRCA & Cours de Certification ISO' : 'BIMCOT - IRCA Training & ISO Certification Courses';
+    document.title = titleKey;
+    
+    // Update all elements with data-i18n attributes
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        }
+    });
+    
+    // Update select options
+    const select = document.getElementById('interest');
+    if (select && translations[lang]) {
+        const options = select.querySelectorAll('option[data-i18n]');
+        options.forEach(option => {
+            const key = option.getAttribute('data-i18n');
+            if (translations[lang][key]) {
+                option.textContent = translations[lang][key];
+            }
+        });
+    }
+}
+
 // Logo fallback handling
 document.addEventListener('DOMContentLoaded', () => {
     const logoImage = document.querySelector('.logo-image');
@@ -82,10 +148,15 @@ if (contactForm) {
         
         // Here you would typically send the data to a server
         // For now, we'll just show an alert
-        alert('Thank you for your interest! We will contact you soon.\n\n' +
-              `Name: ${data.name}\n` +
-              `Email: ${data.email}\n` +
-              `Course: ${data.interest}`);
+        const lang = localStorage.getItem('language') || 'en';
+        const t = translations[lang] || translations.en;
+        const select = document.getElementById('interest');
+        const courseText = select ? select.querySelector(`option[value="${data.interest}"]`)?.textContent || data.interest : data.interest;
+        
+        alert(t['contact.form.success'] + '\n\n' +
+              `${t['contact.form.name']}: ${data.name}\n` +
+              `${t['contact.form.email']}: ${data.email}\n` +
+              `${t['contact.form.interest']}: ${courseText}`);
         
         // Reset form
         contactForm.reset();

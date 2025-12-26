@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIMCOT - IRCA Training & ISO Certification Courses</title>
+    <title id="page-title">BIMCOT - IRCA Training & ISO Certification Courses</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,15 +19,22 @@
                         <img src="logo.png" alt="BIMCOT Logo" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                         <h2 class="logo-text-fallback">BIMCOT</h2>
                     </a>
-                    <span class="tagline">IRCA Training & Certification</span>
+                    <span class="tagline" data-i18n="tagline">IRCA-Certified Training Programs</span>
                 </div>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#standards" class="nav-link">ISO Standards</a></li>
-                    <li><a href="#other" class="nav-link">Other Programs</a></li>
-                    <li><a href="#about" class="nav-link">About IRCA</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#home" class="nav-link" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#standards" class="nav-link" data-i18n="nav.standards">ISO Standards</a></li>
+                    <li><a href="#other" class="nav-link" data-i18n="nav.other">Other Programs</a></li>
+                    <li><a href="#about-bimcot" class="nav-link" data-i18n="nav.aboutBimcot">About BIMCOT</a></li>
+                    <li><a href="#about-irca" class="nav-link" data-i18n="nav.aboutIrca">About IRCA</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
                 </ul>
+                <div class="nav-actions">
+                    <button class="lang-toggle" id="langToggle" aria-label="Change language">
+                        <span class="lang-flag">🇬🇧</span>
+                        <span class="lang-flag">🇫🇷</span>
+                    </button>
+                </div>
                 <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
@@ -42,16 +49,16 @@
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">BIMCOT - IRCA Certified Training</h1>
-                <p class="hero-subtitle">Professional certification courses for ISO standards, NEBOSH, PECB, and CSR/RSE 26000</p>
+                <h1 class="hero-title" data-i18n="hero.title">BIMCOT - IRCA-Certified Training Programs</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Professional training courses leading to IRCA certification for ISO standards, NEBOSH, PECB, and CSR/RSE 26000</p>
                 <div class="hero-buttons">
-                    <a href="#standards" class="btn btn-primary">Explore Courses</a>
-                    <a href="#contact" class="btn btn-secondary">Get Started</a>
+                    <a href="#standards" class="btn btn-primary" data-i18n="hero.btn1">Explore Courses</a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="hero.btn2">Get Started</a>
                 </div>
             </div>
         </div>
         <div class="scroll-indicator">
-            <span>Scroll Down</span>
+            <span data-i18n="hero.scroll">Scroll Down</span>
             <div class="arrow"></div>
         </div>
     </section>
@@ -60,92 +67,92 @@
     <section id="standards" class="standards-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">ISO Standards Training</h2>
-                <p class="section-description">Comprehensive IRCA-certified training programs for international standards</p>
+                <h2 class="section-title" data-i18n="standards.title">ISO Standards Training</h2>
+                <p class="section-description" data-i18n="standards.description">Comprehensive training programs that lead to IRCA certification for international standards</p>
             </div>
             <div class="standards-grid">
                 <!-- ISO 9001 -->
                 <div class="standard-card">
                     <div class="card-icon">📋</div>
-                    <h3>ISO 9001</h3>
-                    <p class="card-subtitle">Quality Management Systems</p>
-                    <p class="card-description">Learn to implement and audit Quality Management Systems according to ISO 9001:2015 standards.</p>
+                    <h3 data-i18n="iso9001.title">ISO 9001</h3>
+                    <p class="card-subtitle" data-i18n="iso9001.subtitle">Quality Management Systems</p>
+                    <p class="card-description" data-i18n="iso9001.description">Learn to implement and audit Quality Management Systems according to ISO 9001:2015 standards.</p>
                     <ul class="card-features">
-                        <li>Lead Auditor Certification</li>
-                        <li>Internal Auditor Training</li>
-                        <li>Implementation Courses</li>
+                        <li data-i18n="iso9001.feature1">Lead Auditor Certification</li>
+                        <li data-i18n="iso9001.feature2">Internal Auditor Training</li>
+                        <li data-i18n="iso9001.feature3">Implementation Courses</li>
                     </ul>
-                    <a href="#contact" class="card-link">Learn More →</a>
+                    <a href="#contact" class="card-link" data-i18n="learnMore">Learn More →</a>
                 </div>
 
                 <!-- ISO 14001 -->
                 <div class="standard-card">
                     <div class="card-icon">🌱</div>
-                    <h3>ISO 14001</h3>
-                    <p class="card-subtitle">Environmental Management</p>
-                    <p class="card-description">Master Environmental Management Systems and contribute to sustainable business practices.</p>
+                    <h3 data-i18n="iso14001.title">ISO 14001</h3>
+                    <p class="card-subtitle" data-i18n="iso14001.subtitle">Environmental Management</p>
+                    <p class="card-description" data-i18n="iso14001.description">Master Environmental Management Systems and contribute to sustainable business practices.</p>
                     <ul class="card-features">
-                        <li>EMS Lead Auditor</li>
-                        <li>Environmental Compliance</li>
-                        <li>Sustainability Auditing</li>
+                        <li data-i18n="iso14001.feature1">EMS Lead Auditor</li>
+                        <li data-i18n="iso14001.feature2">Environmental Compliance</li>
+                        <li data-i18n="iso14001.feature3">Sustainability Auditing</li>
                     </ul>
-                    <a href="#contact" class="card-link">Learn More →</a>
+                    <a href="#contact" class="card-link" data-i18n="learnMore">Learn More →</a>
                 </div>
 
                 <!-- ISO 45001 -->
                 <div class="standard-card">
                     <div class="card-icon">🛡️</div>
-                    <h3>ISO 45001</h3>
-                    <p class="card-subtitle">Occupational Health & Safety</p>
-                    <p class="card-description">Ensure workplace safety with comprehensive OH&S Management Systems training.</p>
+                    <h3 data-i18n="iso45001.title">ISO 45001</h3>
+                    <p class="card-subtitle" data-i18n="iso45001.subtitle">Occupational Health & Safety</p>
+                    <p class="card-description" data-i18n="iso45001.description">Ensure workplace safety with comprehensive OH&S Management Systems training.</p>
                     <ul class="card-features">
-                        <li>OH&S Lead Auditor</li>
-                        <li>Risk Assessment</li>
-                        <li>Safety Management</li>
+                        <li data-i18n="iso45001.feature1">OH&S Lead Auditor</li>
+                        <li data-i18n="iso45001.feature2">Risk Assessment</li>
+                        <li data-i18n="iso45001.feature3">Safety Management</li>
                     </ul>
-                    <a href="#contact" class="card-link">Learn More →</a>
+                    <a href="#contact" class="card-link" data-i18n="learnMore">Learn More →</a>
                 </div>
 
                 <!-- ISO 50001 -->
                 <div class="standard-card">
                     <div class="card-icon">⚡</div>
-                    <h3>ISO 50001</h3>
-                    <p class="card-subtitle">Energy Management</p>
-                    <p class="card-description">Optimize energy performance and reduce costs through effective Energy Management Systems.</p>
+                    <h3 data-i18n="iso50001.title">ISO 50001</h3>
+                    <p class="card-subtitle" data-i18n="iso50001.subtitle">Energy Management</p>
+                    <p class="card-description" data-i18n="iso50001.description">Optimize energy performance and reduce costs through effective Energy Management Systems.</p>
                     <ul class="card-features">
-                        <li>EnMS Lead Auditor</li>
-                        <li>Energy Efficiency</li>
-                        <li>Performance Monitoring</li>
+                        <li data-i18n="iso50001.feature1">EnMS Lead Auditor</li>
+                        <li data-i18n="iso50001.feature2">Energy Efficiency</li>
+                        <li data-i18n="iso50001.feature3">Performance Monitoring</li>
                     </ul>
-                    <a href="#contact" class="card-link">Learn More →</a>
+                    <a href="#contact" class="card-link" data-i18n="learnMore">Learn More →</a>
                 </div>
 
                 <!-- ISO 22000 -->
                 <div class="standard-card">
                     <div class="card-icon">🍽️</div>
-                    <h3>ISO 22000</h3>
-                    <p class="card-subtitle">Food Safety Management</p>
-                    <p class="card-description">Ensure food safety throughout the supply chain with FSMS certification.</p>
+                    <h3 data-i18n="iso22000.title">ISO 22000</h3>
+                    <p class="card-subtitle" data-i18n="iso22000.subtitle">Food Safety Management</p>
+                    <p class="card-description" data-i18n="iso22000.description">Ensure food safety throughout the supply chain with FSMS certification.</p>
                     <ul class="card-features">
-                        <li>FSMS Lead Auditor</li>
-                        <li>HACCP Integration</li>
-                        <li>Food Safety Auditing</li>
+                        <li data-i18n="iso22000.feature1">FSMS Lead Auditor</li>
+                        <li data-i18n="iso22000.feature2">HACCP Integration</li>
+                        <li data-i18n="iso22000.feature3">Food Safety Auditing</li>
                     </ul>
-                    <a href="#contact" class="card-link">Learn More →</a>
+                    <a href="#contact" class="card-link" data-i18n="learnMore">Learn More →</a>
                 </div>
 
                 <!-- ISO 21001 -->
                 <div class="standard-card">
                     <div class="card-icon">🎓</div>
-                    <h3>ISO 21001</h3>
-                    <p class="card-subtitle">Educational Organizations</p>
-                    <p class="card-description">Enhance educational quality and learner satisfaction with EOMS certification.</p>
+                    <h3 data-i18n="iso21001.title">ISO 21001</h3>
+                    <p class="card-subtitle" data-i18n="iso21001.subtitle">Educational Organizations</p>
+                    <p class="card-description" data-i18n="iso21001.description">Enhance educational quality and learner satisfaction with EOMS certification.</p>
                     <ul class="card-features">
-                        <li>EOMS Lead Auditor</li>
-                        <li>Educational Quality</li>
-                        <li>Learner Focus</li>
+                        <li data-i18n="iso21001.feature1">EOMS Lead Auditor</li>
+                        <li data-i18n="iso21001.feature2">Educational Quality</li>
+                        <li data-i18n="iso21001.feature3">Learner Focus</li>
                     </ul>
-                    <a href="#contact" class="card-link">Learn More →</a>
+                    <a href="#contact" class="card-link" data-i18n="learnMore">Learn More →</a>
                 </div>
             </div>
         </div>
@@ -155,98 +162,147 @@
     <section id="other" class="other-programs-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Additional Training Programs</h2>
-                <p class="section-description">Specialized certification courses for comprehensive professional development</p>
+                <h2 class="section-title" data-i18n="other.title">Additional Training Programs</h2>
+                <p class="section-description" data-i18n="other.description">Specialized training courses leading to professional certifications for comprehensive career development</p>
             </div>
             <div class="programs-grid">
                 <!-- CSR/RSE 26000 -->
                 <div class="program-card">
                     <div class="program-icon">🤝</div>
-                    <h3>CSR/RSE 26000</h3>
-                    <p class="program-subtitle">Social Responsibility</p>
-                    <p class="program-description">Implement and audit Social Responsibility practices according to ISO 26000 guidelines.</p>
+                    <h3 data-i18n="csr.title">CSR/RSE 26000</h3>
+                    <p class="program-subtitle" data-i18n="csr.subtitle">Social Responsibility</p>
+                    <p class="program-description" data-i18n="csr.description">Implement and audit Social Responsibility practices according to ISO 26000 guidelines.</p>
                     <div class="program-highlights">
-                        <span class="highlight">Social Impact</span>
-                        <span class="highlight">Stakeholder Engagement</span>
-                        <span class="highlight">Ethical Practices</span>
+                        <span class="highlight" data-i18n="csr.highlight1">Social Impact</span>
+                        <span class="highlight" data-i18n="csr.highlight2">Stakeholder Engagement</span>
+                        <span class="highlight" data-i18n="csr.highlight3">Ethical Practices</span>
                     </div>
-                    <a href="#contact" class="card-link">Learn More →</a>
+                    <a href="#contact" class="card-link" data-i18n="learnMore">Learn More →</a>
                 </div>
 
                 <!-- NEBOSH -->
                 <div class="program-card">
                     <div class="program-icon">🏆</div>
-                    <h3>NEBOSH</h3>
-                    <p class="program-subtitle">Health & Safety Excellence</p>
-                    <p class="program-description">Internationally recognized qualifications in health, safety, and environmental management.</p>
+                    <h3 data-i18n="nebosh.title">NEBOSH</h3>
+                    <p class="program-subtitle" data-i18n="nebosh.subtitle">Health & Safety Excellence</p>
+                    <p class="program-description" data-i18n="nebosh.description">Internationally recognized qualifications in health, safety, and environmental management.</p>
                     <div class="program-highlights">
-                        <span class="highlight">IGC Certification</span>
-                        <span class="highlight">Diploma Programs</span>
-                        <span class="highlight">Risk Management</span>
+                        <span class="highlight" data-i18n="nebosh.highlight1">IGC Certification</span>
+                        <span class="highlight" data-i18n="nebosh.highlight2">Diploma Programs</span>
+                        <span class="highlight" data-i18n="nebosh.highlight3">Risk Management</span>
                     </div>
-                    <a href="#contact" class="card-link">Learn More →</a>
+                    <a href="#contact" class="card-link" data-i18n="learnMore">Learn More →</a>
                 </div>
 
                 <!-- PECB -->
                 <div class="program-card">
                     <div class="program-icon">✅</div>
-                    <h3>PECB</h3>
-                    <p class="program-subtitle">Professional Excellence</p>
-                    <p class="program-description">Professional evaluation and certification board programs for various management systems.</p>
+                    <h3 data-i18n="pecb.title">PECB</h3>
+                    <p class="program-subtitle" data-i18n="pecb.subtitle">Professional Excellence</p>
+                    <p class="program-description" data-i18n="pecb.description">Professional evaluation and certification board programs for various management systems.</p>
                     <div class="program-highlights">
-                        <span class="highlight">Multiple Standards</span>
-                        <span class="highlight">Lead Auditor</span>
-                        <span class="highlight">Implementation</span>
+                        <span class="highlight" data-i18n="pecb.highlight1">Multiple Standards</span>
+                        <span class="highlight" data-i18n="pecb.highlight2">Lead Auditor</span>
+                        <span class="highlight" data-i18n="pecb.highlight3">Implementation</span>
                     </div>
-                    <a href="#contact" class="card-link">Learn More →</a>
+                    <a href="#contact" class="card-link" data-i18n="learnMore">Learn More →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About IRCA Section -->
-    <section id="about" class="about-section">
+    <!-- About BIMCOT Section -->
+    <section id="about-bimcot" class="about-section">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>About IRCA</h2>
-                    <p class="about-intro">The International Register of Certificated Auditors (IRCA) is the world's original and largest international certification body for auditors of management systems.</p>
+                    <h2 data-i18n="aboutBimcot.title">About BIMCOT</h2>
+                    <p class="about-intro" data-i18n="aboutBimcot.intro">BIMCOT is a professional training organization that offers IRCA-certified training programs. We provide comprehensive training courses that prepare professionals to obtain IRCA certifications in various management system standards. While we deliver IRCA-certified training, BIMCOT is an independent training provider, not affiliated with IRCA.</p>
                     <div class="about-features">
                         <div class="feature-item">
-                            <div class="feature-icon">🌍</div>
+                            <div class="feature-icon">🎯</div>
                             <div class="feature-content">
-                                <h4>Global Recognition</h4>
-                                <p>IRCA certifications are recognized worldwide by employers and certification bodies.</p>
+                                <h4 data-i18n="aboutBimcot.mission.title">Our Mission</h4>
+                                <p data-i18n="aboutBimcot.mission.text">To provide high-quality training programs for ISO standards, NEBOSH, PECB, and other professional certifications, enabling participants to excel in their auditing and management careers through IRCA-certified training.</p>
                             </div>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-icon">📜</div>
+                            <div class="feature-icon">👥</div>
                             <div class="feature-content">
-                                <h4>Professional Standards</h4>
-                                <p>Rigorous training and certification processes ensure the highest professional standards.</p>
+                                <h4 data-i18n="aboutBimcot.trainers.title">Our Trainers</h4>
+                                <p data-i18n="aboutBimcot.trainers.text">Our courses are delivered by certified and experienced trainers who possess deep expertise in their respective fields and are qualified to deliver IRCA-certified training programs.</p>
                             </div>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-icon">🚀</div>
+                            <div class="feature-icon">✅</div>
                             <div class="feature-content">
-                                <h4>Career Advancement</h4>
-                                <p>IRCA certification opens doors to senior auditing roles and consulting opportunities.</p>
+                                <h4 data-i18n="aboutBimcot.irca.title">IRCA-Certified Training</h4>
+                                <p data-i18n="aboutBimcot.irca.text">We offer training programs that are IRCA-certified, preparing participants to successfully obtain internationally recognized IRCA certifications upon course completion.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="about-stats">
                     <div class="stat-card">
-                        <div class="stat-number">50,000+</div>
-                        <div class="stat-label">Certified Auditors</div>
+                        <div class="stat-number">Tunisia</div>
+                        <div class="stat-label" data-i18n="aboutBimcot.stat1.label">Based in Tunisia</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">150+</div>
-                        <div class="stat-label">Countries</div>
+                        <div class="stat-number">ISO</div>
+                        <div class="stat-label" data-i18n="aboutBimcot.stat2.label">Multiple Standards</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">40+</div>
-                        <div class="stat-label">Years Experience</div>
+                        <div class="stat-number">IRCA</div>
+                        <div class="stat-label" data-i18n="aboutBimcot.stat3.label">Certified Training</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About IRCA Section -->
+    <section id="about-irca" class="about-section" style="background: var(--bg-white);">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 data-i18n="aboutIrca.title">About IRCA</h2>
+                    <p class="about-intro" data-i18n="aboutIrca.intro">The International Register of Certificated Auditors (IRCA) is the world's original and largest international certification body for auditors of management systems. BIMCOT offers training programs that prepare participants to obtain IRCA certifications, but BIMCOT is an independent training provider and is not affiliated with or endorsed by IRCA.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">🌍</div>
+                            <div class="feature-content">
+                                <h4 data-i18n="aboutIrca.recognition.title">Global Recognition</h4>
+                                <p data-i18n="aboutIrca.recognition.text">IRCA certifications are recognized worldwide by employers and certification bodies, making them highly valuable for career advancement.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📜</div>
+                            <div class="feature-content">
+                                <h4 data-i18n="aboutIrca.standards.title">Professional Standards</h4>
+                                <p data-i18n="aboutIrca.standards.text">IRCA maintains rigorous training and certification processes that ensure the highest professional standards in auditing.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🚀</div>
+                            <div class="feature-content">
+                                <h4 data-i18n="aboutIrca.career.title">Career Advancement</h4>
+                                <p data-i18n="aboutIrca.career.text">IRCA certification opens doors to senior auditing roles and consulting opportunities worldwide, which is why we offer IRCA-certified training programs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-i18n="aboutIrca.stat1.number">50,000+</div>
+                        <div class="stat-label" data-i18n="aboutIrca.stat1.label">Certified Auditors</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-i18n="aboutIrca.stat2.number">150+</div>
+                        <div class="stat-label" data-i18n="aboutIrca.stat2.label">Countries</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-i18n="aboutIrca.stat3.number">40+</div>
+                        <div class="stat-label" data-i18n="aboutIrca.stat3.label">Years Experience</div>
                     </div>
                 </div>
             </div>
@@ -257,31 +313,31 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Get Started Today</h2>
-                <p class="section-description">Contact us to learn more about our training programs and certification courses</p>
+                <h2 class="section-title" data-i18n="contact.title">Get Started Today</h2>
+                <p class="section-description" data-i18n="contact.description">Contact us to learn more about our IRCA-certified training programs</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Contact Information</h3>
+                    <h3 data-i18n="contact.info.title">Contact Information</h3>
                     <div class="info-item">
                         <div class="info-icon">💼</div>
                         <div>
-                            <strong>Company</strong>
+                            <strong data-i18n="contact.company">Company</strong>
                             <p>BIMCOT</p>
                         </div>
                     </div>
                     <div class="info-item">
                         <div class="info-icon">🔗</div>
                         <div>
-                            <strong>LinkedIn</strong>
+                            <strong data-i18n="contact.linkedin">LinkedIn</strong>
                             <p><a href="https://linkedin.com/company/bimcot/" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: none;">linkedin.com/company/bimcot</a></p>
                         </div>
                     </div>
                     <div class="info-item">
                         <div class="info-icon">📍</div>
                         <div>
-                            <strong>Location</strong>
-                            <p>Soukra, Ariana, Tunisia</p>
+                            <strong data-i18n="contact.location">Location</strong>
+                            <p data-i18n="contact.location.text">Soukra, Ariana, Tunisia</p>
                         </div>
                     </div>
                     <div class="social-links">
@@ -289,44 +345,44 @@
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                             </svg>
-                            <span>Follow us on LinkedIn</span>
+                            <span data-i18n="contact.social">Follow us on LinkedIn</span>
                         </a>
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <label for="name">Full Name</label>
+                        <label for="name" data-i18n="contact.form.name">Full Name</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address</label>
+                        <label for="email" data-i18n="contact.form.email">Email Address</label>
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
+                        <label for="phone" data-i18n="contact.form.phone">Phone Number</label>
                         <input type="tel" id="phone" name="phone">
                     </div>
                     <div class="form-group">
-                        <label for="interest">Course Interest</label>
+                        <label for="interest" data-i18n="contact.form.interest">Course Interest</label>
                         <select id="interest" name="interest" required>
-                            <option value="">Select a course...</option>
-                            <option value="iso9001">ISO 9001 - Quality Management</option>
-                            <option value="iso14001">ISO 14001 - Environmental Management</option>
-                            <option value="iso45001">ISO 45001 - OH&S Management</option>
-                            <option value="iso50001">ISO 50001 - Energy Management</option>
-                            <option value="iso22000">ISO 22000 - Food Safety</option>
-                            <option value="iso21001">ISO 21001 - Educational Organizations</option>
-                            <option value="csr26000">CSR/RSE 26000 - Social Responsibility</option>
-                            <option value="nebosh">NEBOSH</option>
-                            <option value="pecb">PECB</option>
-                            <option value="multiple">Multiple Courses</option>
+                            <option value="" data-i18n="contact.form.interest.select">Select a course...</option>
+                            <option value="iso9001" data-i18n="contact.form.interest.iso9001">ISO 9001 - Quality Management</option>
+                            <option value="iso14001" data-i18n="contact.form.interest.iso14001">ISO 14001 - Environmental Management</option>
+                            <option value="iso45001" data-i18n="contact.form.interest.iso45001">ISO 45001 - OH&S Management</option>
+                            <option value="iso50001" data-i18n="contact.form.interest.iso50001">ISO 50001 - Energy Management</option>
+                            <option value="iso22000" data-i18n="contact.form.interest.iso22000">ISO 22000 - Food Safety</option>
+                            <option value="iso21001" data-i18n="contact.form.interest.iso21001">ISO 21001 - Educational Organizations</option>
+                            <option value="csr26000" data-i18n="contact.form.interest.csr26000">CSR/RSE 26000 - Social Responsibility</option>
+                            <option value="nebosh" data-i18n="contact.form.interest.nebosh">NEBOSH</option>
+                            <option value="pecb" data-i18n="contact.form.interest.pecb">PECB</option>
+                            <option value="multiple" data-i18n="contact.form.interest.multiple">Multiple Courses</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
+                        <label for="message" data-i18n="contact.form.message">Message</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    <button type="submit" class="btn btn-primary btn-block" data-i18n="contact.form.submit">Send Message</button>
                 </form>
             </div>
         </div>
@@ -338,27 +394,28 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>BIMCOT</h4>
-                    <p>Professional IRCA certification training for management system auditors worldwide.</p>
+                    <p data-i18n="footer.description">Professional training organization offering IRCA-certified training programs for management system auditors worldwide.</p>
                     <div class="footer-social" style="margin-top: 1rem;">
                         <a href="https://linkedin.com/company/bimcot/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                             </svg>
-                            LinkedIn
+                            <span data-i18n="linkedin">LinkedIn</span>
                         </a>
                     </div>
                 </div>
+                    <div class="footer-section">
+                        <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+                        <ul>
+                            <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                            <li><a href="#standards" data-i18n="nav.standards">ISO Standards</a></li>
+                            <li><a href="#other" data-i18n="nav.other">Other Programs</a></li>
+                            <li><a href="#about-bimcot" data-i18n="nav.aboutBimcot">About BIMCOT</a></li>
+                            <li><a href="#about-irca" data-i18n="nav.aboutIrca">About IRCA</a></li>
+                        </ul>
+                    </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#standards">ISO Standards</a></li>
-                        <li><a href="#other">Other Programs</a></li>
-                        <li><a href="#about">About IRCA</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Standards</h4>
+                    <h4 data-i18n="footer.standards">Standards</h4>
                     <ul>
                         <li><a href="#standards">ISO 9001</a></li>
                         <li><a href="#standards">ISO 14001</a></li>
@@ -367,19 +424,20 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="footer.contact">Contact</h4>
                     <ul>
-                        <li><a href="https://linkedin.com/company/bimcot/" target="_blank" rel="noopener noreferrer">LinkedIn: BIMCOT</a></li>
-                        <li>Location: Soukra, Ariana, Tunisia</li>
+                        <li><a href="https://linkedin.com/company/bimcot/" target="_blank" rel="noopener noreferrer"><span data-i18n="linkedin">LinkedIn</span>: BIMCOT</a></li>
+                        <li><span data-i18n="contact.location">Location</span>: <span data-i18n="contact.location.text">Soukra, Ariana, Tunisia</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 BIMCOT. All rights reserved.</p>
+                <p>&copy; 2026 BIMCOT. <span data-i18n="footer.copyright">All rights reserved.</span></p>
             </div>
         </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
